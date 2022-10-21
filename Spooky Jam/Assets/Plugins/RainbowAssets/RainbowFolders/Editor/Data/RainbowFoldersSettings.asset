@@ -365,8 +365,8 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
   - Type: 1
-    Key: Assets/Settings/URP
-    IconType: 2140
+    Key: Assets/Graphics/Annimations
+    IconType: 2010
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
@@ -374,8 +374,17 @@ MonoBehaviour:
     BackgroundTexture: {fileID: 0}
     IsBackgroundRecursive: 0
   - Type: 1
-    Key: Assets/Graphics/Annimations
-    IconType: 2010
+    Key: Assets/Lights
+    IconType: 2050
+    SmallIcon: {fileID: 0}
+    LargeIcon: {fileID: 0}
+    IsIconRecursive: 0
+    BackgroundType: 0
+    BackgroundTexture: {fileID: 0}
+    IsBackgroundRecursive: 0
+  - Type: 1
+    Key: Assets/NamesSpace
+    IconType: 100
     SmallIcon: {fileID: 0}
     LargeIcon: {fileID: 0}
     IsIconRecursive: 0
