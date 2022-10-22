@@ -26,6 +26,11 @@ public class CharacterControler : MonoBehaviour
     {
         input = gameObject.GetComponent<InputInterface>();
     }
+
+    private void Update()
+    {
+        transform.rotation = Direction != Vector3.zero ? Quaternion.LookRotation(transform.forward, Direction) : transform.rotation;
+    }
     private void FixedUpdate()
     {
         if (input.GetDirection() != Vector3.zero)

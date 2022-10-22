@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4363033594600345723}
   - component: {fileID: 4363033594600345726}
   - component: {fileID: 4363033594600345713}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Natou
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 4363033594600345702}
   m_LocalRotation: {x: 0, y: 0, z: -0.15819256, w: 0.9874083}
   m_LocalPosition: {x: 0.957, y: -1.191, z: -1.3718767}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,15 +75,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1315829561
+  m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 6ea1a158fb5876b4384ca4055c17c381, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a59baa95844c8642b37843ee54f38d8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 7.42, y: 6.65}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
