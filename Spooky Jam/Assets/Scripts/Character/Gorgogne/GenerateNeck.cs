@@ -25,7 +25,7 @@ public class GenerateNeck : MonoBehaviour
         float t = 0;
         for (int i = 0; i < SizeCurve; i++)
         {
-                Line.SetPosition(i ,ExtensionMethod.BezierCurve(PointsSpline[0],PointsSpline[1],PointsSpline[2],PointsSpline[3], CurrentCurve.Evaluate(t)));
+                Line.SetPosition(i ,ExtensionMethod.BezierCurve(PointsSpline[0],PointsSpline[1],PointsSpline[2],PointsSpline[3], t));
                 t += 1f / (SizeCurve-1);
         }
     }
