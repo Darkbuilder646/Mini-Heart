@@ -8,23 +8,6 @@ public class KeyAndDoor : MonoBehaviour
     [SerializeField] private bool asBlueKey = false;
     public float vitesse = 0.5f;
 
-    private void Update() 
-    {
-        if(Input.GetKey(KeyCode.Z))
-            transform.position += Vector3.up * vitesse;
-
-        if(Input.GetKey(KeyCode.S))
-            transform.position += Vector3.down * vitesse;
-        
-        if(Input.GetKey(KeyCode.D))
-            transform.position += Vector3.right * vitesse;
-
-        if(Input.GetKey(KeyCode.Q))
-            transform.position += Vector3.left * vitesse;
-
-
-    }
-
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if(other.CompareTag("RedKey")) 
