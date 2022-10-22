@@ -29,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4363033594600345702}
-  m_LocalRotation: {x: -0, y: -0, z: -0.15819222, w: 0.9874084}
+  m_LocalRotation: {x: 0, y: 0, z: -0.15819256, w: 0.9874083}
   m_LocalPosition: {x: 0.957, y: -1.191, z: -1.3718767}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6ea1a158fb5876b4384ca4055c17c381, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CheckPoints:
-  - {x: -0.091204286, y: -0.7841998, z: 0}
-  - {x: 3.0674012, y: 0.053278446, z: 0}
+  - {x: 0.6084425, y: 1.7599702, z: 0}
+  - {x: 4.037366, y: -0.64636827, z: 0}
   DistanceFinish: 0.2
   TimeSearch: 3

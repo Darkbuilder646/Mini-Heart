@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2853962230902326555}
   - component: {fileID: 2853962230902326553}
   - component: {fileID: 2853962230902326554}
+  - component: {fileID: 1680515203}
   m_Layer: 0
   m_Name: P1
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2853962230902326559}
-  m_LocalRotation: {x: -0, y: -0, z: -0.15819222, w: 0.9874084}
+  m_LocalRotation: {x: 0, y: 0, z: -0.15819256, w: 0.9874083}
   m_LocalPosition: {x: -0.058313858, y: 0.19178855, z: -1.3718767}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -74,10 +75,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_SortingLayerID: 1315829561
+  m_SortingLayer: 1
+  m_SortingOrder: 7
+  m_Sprite: {fileID: 21300000, guid: 7b526e16c007f564fb395dccbb4e6e20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,9 +102,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.09, y: -0.16}
   serializedVersion: 2
-  m_Radius: 0.075
+  m_Radius: 1.07
 --- !u!50 &2853962230902326555
 Rigidbody2D:
   serializedVersion: 4
@@ -137,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c490b1aa752b94469059f31cee69546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1.2
+  Speed: 3
   AccelerationPower: 0.05
 --- !u!114 &2853962230902326554
 MonoBehaviour:
@@ -151,3 +152,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a07b5545a39012043a7fff91dd6bf306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1680515203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2853962230902326559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e018e987de53a44b8711376e828a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particlePrefab: {fileID: 4438733161039611607, guid: 82d9dc6ba89383b4086395b377a2375b, type: 3}
+  beatSound: []
+  delay: 2
