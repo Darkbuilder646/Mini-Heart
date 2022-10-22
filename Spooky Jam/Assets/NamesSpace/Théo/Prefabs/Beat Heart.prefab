@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4438733161039611601}
   - component: {fileID: 4438733161039611606}
   - component: {fileID: 7615355432997549641}
+  - component: {fileID: 986918684261460662}
   m_Layer: 0
   m_Name: Beat Heart
   m_TagString: Untagged
@@ -4890,5 +4891,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f6db7edf4c6cb64409cd8627324576d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &986918684261460662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4438733161039611607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b79a162795a2eb74f90896589679aa13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
