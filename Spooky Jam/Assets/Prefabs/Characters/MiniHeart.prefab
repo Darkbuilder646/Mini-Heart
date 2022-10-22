@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2853962230902326554}
   - component: {fileID: 1680515203}
   m_Layer: 0
-  m_Name: P1
+  m_Name: MiniHeart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c490b1aa752b94469059f31cee69546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 3
+  Speed: 4.5
   AccelerationPower: 0.05
 --- !u!114 &2853962230902326554
 MonoBehaviour:
