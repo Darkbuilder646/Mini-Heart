@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterControler))]
 public class EnemiesInputFollow : MonoBehaviour , InputInterface
 {
     private enum ModeEnemy
@@ -45,7 +46,6 @@ public class EnemiesInputFollow : MonoBehaviour , InputInterface
         if (CurrentMode == ModeEnemy.Sleep)
         {
             Direction = CurrentPlayer!= null && (StartPosition - transform.position).magnitude >= IndexCorrection ? StartPosition - transform.position : Vector3.zero;
-            if(CurrentPlayer)Debug.Log((CurrentPlayer.transform.position - transform.position).magnitude + " " + IndexCorrection);
         }
         else
         {

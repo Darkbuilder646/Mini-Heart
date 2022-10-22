@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterControler))]
 public class PlayerInput : MonoBehaviour , InputInterface
 {
     private Vector3 Direction;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterControler))]
 public class EnemiesInputCheckPoints : MonoBehaviour, InputInterface
 {
     private enum ModeEnemy
