@@ -5,9 +5,12 @@ using UnityEngine;
 public class Beat : MonoBehaviour
 {
     [SerializeField] private GameObject particlePrefab;
-    [SerializeField] private List<AudioClip> beatSound = new List<AudioClip>();
+    [SerializeField] private AudioClip simpleBeat;
+    [SerializeField] private AudioClip fearBeat;
+    [SerializeField] private AudioSource beatSound;
     [SerializeField] private float delay = 2;
     private bool isActive = false;
+    private bool inMonsterRange = false;
 
     private void Start() 
     {
@@ -25,9 +28,38 @@ public class Beat : MonoBehaviour
     IEnumerator PlayBeat()
     {
         isActive = true;
+
+        if(inMonsterRange)
+        {
+            Debug.Log("fear");
+            beatSound.PlayOneShot(fearBeat);
+            yield return new WaitForSeconds(delay / 1.5f);
+            isActive = false;
+        }
+        else
+        {
+            Debug.Log("normal");
+            beatSound.PlayOneShot(simpleBeat);
+            yield return new WaitForSeconds(delay);
+            isActive = false;
+        }
+
         Instantiate(particlePrefab, transform.position, Quaternion.identity);
-        yield return new WaitForSeconds(delay);
-        isActive = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D other) 
+    {
+        if(other.CompareTag("Monster"))
+        {
+            inMonsterRange = true;
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.CompareTag("Monster"))
+        {
+            inMonsterRange = false;
+        }
     }
 
 

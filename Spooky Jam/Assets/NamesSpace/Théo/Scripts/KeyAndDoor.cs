@@ -6,7 +6,6 @@ public class KeyAndDoor : MonoBehaviour
 {
     [SerializeField] private bool asRedKey = false;
     [SerializeField] private bool asBlueKey = false;
-    public float vitesse = 0.5f;
 
     private void OnTriggerEnter2D(Collider2D other) 
     {
