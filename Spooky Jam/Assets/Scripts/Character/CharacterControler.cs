@@ -20,6 +20,8 @@ public class CharacterControler : MonoBehaviour
         None
     }
     private Vector3 Direction;
+
+    public float speed { get => Speed; set => Speed = value; }
     #endregion
 
     private void Awake()

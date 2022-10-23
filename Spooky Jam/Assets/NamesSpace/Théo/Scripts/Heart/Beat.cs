@@ -12,14 +12,18 @@ public class Beat : MonoBehaviour
     [SerializeField] private AudioClip fearBeat;
     [SerializeField] private AudioSource beatSound;
     [SerializeField] private float delay = 2;
+    [SerializeField] private CharacterControler characterControler;
+    [SerializeField] private float SpeedStress = 3.2f;
     [SerializeField] private float t = 0;
     private bool isActive = false;
     private Vector3 StartScale;
     public bool inMonsterRange = false;
+    private float StartSpeed;
 
     private void Start()
     {
         StartScale = transform.localScale;
+        StartSpeed = characterControler.speed;
         StartCoroutine(PlayBeat());
     }
     private void Update() 
@@ -41,6 +45,7 @@ public class Beat : MonoBehaviour
             beatSound.PlayOneShot(fearBeat);
             transform.DOKill(true);
             transform.DOPunchScale(new Vector3(0.25f, 0.25f, 0), 0.4f);
+            characterControler.speed = SpeedStress;
             yield return new WaitForSeconds(delay / (1.5f+t));
             isActive = false;
         }
@@ -49,6 +54,7 @@ public class Beat : MonoBehaviour
             beatSound.PlayOneShot(simpleBeat);
             transform.DOKill(true);
             transform.DOPunchScale(new Vector3(0.15f, 0.15f, 0), 0.5f);
+            characterControler.speed = StartSpeed;
             yield return new WaitForSeconds(delay);
             isActive = false;
         }
