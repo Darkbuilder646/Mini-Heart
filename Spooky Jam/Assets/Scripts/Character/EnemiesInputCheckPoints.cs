@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(CharacterControler))]
 public class EnemiesInputCheckPoints : MonoBehaviour, InputInterface
@@ -19,9 +20,12 @@ public class EnemiesInputCheckPoints : MonoBehaviour, InputInterface
     private ModeEnemy CurrentMode = ModeEnemy.Checkpoint;
     private GameObject CurrentPlayer;
     private float Timer;
+    private Vector3 StartScale;
+    private bool ScaleComplete = true;
 
     private void Awake()
     {
+        StartScale = transform.localScale;
         Timer = TimeSearch;
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +35,7 @@ public class EnemiesInputCheckPoints : MonoBehaviour, InputInterface
         {
             CurrentPlayer = p.gameObject;
             CurrentMode = ModeEnemy.Chase;
-            CurrentPlayer.GetComponent<Beat>().inMonsterRange = true;
+            CurrentPlayer.GetComponent<Beat>().ChangeBeatMode(true);
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -45,15 +49,29 @@ public class EnemiesInputCheckPoints : MonoBehaviour, InputInterface
     }
     private void Update()
     {
+        
+
         if (CurrentMode == ModeEnemy.Checkpoint)
         {
             Direction = CheckPoints[index] - transform.position;
             float Distance = Direction.magnitude;
             index = Distance <= DistanceFinish ? index + 1 : index;
             index = index > CheckPoints.Count - 1 ? 0 : index;
+            if (ScaleComplete)
+            {
+                transform.DOScale(StartScale * 1.07f, 2).OnComplete(() =>
+                    transform.DOScale(StartScale, 2).OnComplete(() => ScaleComplete = true));
+                ScaleComplete = false;
+            }
         }
         else
         {
+            if (ScaleComplete)
+            {
+                transform.DOScale(StartScale * 1.07f, 1).OnComplete(() => 
+                    transform.DOScale(StartScale, 1).OnComplete(()=> ScaleComplete = true));
+                ScaleComplete = false;
+            }
             if (CurrentMode == ModeEnemy.Search)
             {
                 Timer -= Time.deltaTime;
@@ -61,7 +79,7 @@ public class EnemiesInputCheckPoints : MonoBehaviour, InputInterface
                 {
                     CurrentMode = ModeEnemy.Checkpoint;
                     Timer = TimeSearch;
-                    CurrentPlayer.GetComponent<Beat>().inMonsterRange = false;
+                    CurrentPlayer.GetComponent<Beat>().ChangeBeatMode(false);
                 }
             }
             else
