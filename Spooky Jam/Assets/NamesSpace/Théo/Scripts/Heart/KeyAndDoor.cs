@@ -14,17 +14,14 @@ public class KeyAndDoor : MonoBehaviour
     {
         if(other.CompareTag("RedKey")) 
         {
-            KeyRedImage.canvas.enabled = true;
-            Debug.Log("RedKey");
+            //KeyRedImage.canvas.enabled = true;
             asRedKey = true;
-            
-            
             Destroy(other.gameObject);
         }
         if(other.CompareTag("BlueKey"))
         {
             asBlueKey = true;
-            KeyBlueImage.canvas.enabled = true;
+            //KeyBlueImage.canvas.enabled = true;
             Destroy(other.gameObject);
         }
         
@@ -35,14 +32,14 @@ public class KeyAndDoor : MonoBehaviour
         if(other.collider.CompareTag("RedDoor") && asRedKey)
         {
             asRedKey = false;
-            KeyRedImage.canvas.enabled = false;
+            //KeyRedImage.canvas.enabled = false;
             Destroy(other.gameObject);
 
         }
         if(other.collider.CompareTag("BlueDoor") && asBlueKey)
         {
             asBlueKey = false;
-            KeyBlueImage.canvas.enabled = false;
+            //KeyBlueImage.canvas.enabled = false;
             Destroy(other.gameObject);
 
         }
