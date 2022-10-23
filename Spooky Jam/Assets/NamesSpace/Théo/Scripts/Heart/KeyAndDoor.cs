@@ -12,13 +12,11 @@ public class KeyAndDoor : MonoBehaviour
         if(other.CompareTag("RedKey")) 
         {
             asRedKey = true;
-            Debug.Log("I have a Red Key");
             Destroy(other.gameObject);
         }
         if(other.CompareTag("BlueKey"))
         {
             asBlueKey = true;
-            Debug.Log("I have a Blue Key");
             Destroy(other.gameObject);
         }
         
