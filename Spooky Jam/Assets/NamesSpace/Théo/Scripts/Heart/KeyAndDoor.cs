@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class KeyAndDoor : MonoBehaviour
 {
-    [SerializeField] private GameObject prefabOpenDoor;
     [SerializeField] private bool asRedKey = false;
     [SerializeField] private bool asBlueKey = false;
 
@@ -31,7 +30,6 @@ public class KeyAndDoor : MonoBehaviour
         {
             asRedKey = false;
             Debug.Log("Red Door Unlock");
-            
             Destroy(other.gameObject);
 
         }
@@ -39,7 +37,6 @@ public class KeyAndDoor : MonoBehaviour
         {
             asBlueKey = false;
             Debug.Log("Blue Door Unlock");
-            
             Destroy(other.gameObject);
 
         }
