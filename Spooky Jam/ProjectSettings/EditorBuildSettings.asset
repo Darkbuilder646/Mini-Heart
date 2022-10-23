@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/NamesSpace/Th\xE9o/Scenes/Main Menu.unity"
     guid: 166e25b8ca753ea48955c4dcde6f4527
-  - enabled: 1
+  - enabled: 0
     path: "Assets/NamesSpace/Th\xE9o/Scenes/Game Level Design.unity"
     guid: ede4e6a6ab50d114c88da01e37232056
+  - enabled: 1
+    path: Assets/Scenes/FinalScene.unity
+    guid: 540714b50cd811644bf2bedbe106ee11
   m_configObjects: {}

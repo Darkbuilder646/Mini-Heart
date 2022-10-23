@@ -36,7 +36,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadSceneAsync("Game Level Design",LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync("FinalScene", LoadSceneMode.Single);
         Debug.Log("Game Start");
     }
 
