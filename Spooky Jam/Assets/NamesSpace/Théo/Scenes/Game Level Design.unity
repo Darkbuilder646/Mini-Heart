@@ -5832,6 +5832,10 @@ PrefabInstance:
       propertyPath: m_Vertices.Array.data[195].position.y
       value: -6.5715
       objectReference: {fileID: 0}
+    - target: {fileID: 969664145, guid: 786c96268c014704b99235bd5e2de8cd, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1680515203, guid: 786c96268c014704b99235bd5e2de8cd, type: 3}
       propertyPath: fearBeat
       value: 
@@ -5844,6 +5848,10 @@ PrefabInstance:
       propertyPath: simpleBeat
       value: 
       objectReference: {fileID: 8300000, guid: ea2b41675957b2043918ec639e189f9e, type: 3}
+    - target: {fileID: 1846410335, guid: 786c96268c014704b99235bd5e2de8cd, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2853962230902326555, guid: 786c96268c014704b99235bd5e2de8cd, type: 3}
       propertyPath: m_BodyType
       value: 0

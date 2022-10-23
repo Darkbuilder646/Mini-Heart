@@ -31,6 +31,7 @@ public class EnemiesInputCheckPoints : MonoBehaviour, InputInterface
         {
             CurrentPlayer = p.gameObject;
             CurrentMode = ModeEnemy.Chase;
+            CurrentPlayer.GetComponent<Beat>().inMonsterRange = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -60,6 +61,7 @@ public class EnemiesInputCheckPoints : MonoBehaviour, InputInterface
                 {
                     CurrentMode = ModeEnemy.Checkpoint;
                     Timer = TimeSearch;
+                    CurrentPlayer.GetComponent<Beat>().inMonsterRange = false;
                 }
             }
             else

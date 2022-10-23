@@ -30,6 +30,7 @@ public class EnemiesInputFollow : MonoBehaviour , InputInterface
         {
             CurrentPlayer = p.gameObject;
             CurrentMode = ModeEnemy.Chase;
+            CurrentPlayer.GetComponent<Beat>().inMonsterRange = true;
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -39,6 +40,7 @@ public class EnemiesInputFollow : MonoBehaviour , InputInterface
         {
             CurrentPlayer = p.gameObject;
             CurrentMode = ModeEnemy.Search;
+            
         }
     }
     private void Update()
@@ -56,6 +58,7 @@ public class EnemiesInputFollow : MonoBehaviour , InputInterface
                 {
                     CurrentMode = ModeEnemy.Sleep;
                     Timer = TimeSearch;
+                    CurrentPlayer.GetComponent<Beat>().inMonsterRange = false;
                 }
             }
             else

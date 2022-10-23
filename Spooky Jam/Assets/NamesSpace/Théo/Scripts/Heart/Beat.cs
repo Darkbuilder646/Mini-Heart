@@ -10,7 +10,7 @@ public class Beat : MonoBehaviour
     [SerializeField] private AudioSource beatSound;
     [SerializeField] private float delay = 2;
     private bool isActive = false;
-    private bool inMonsterRange = false;
+    public bool inMonsterRange = false;
 
     private void Start() 
     {
