@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
+using UnityEngine.Rendering;
+using DG.Tweening;
 
 public class Beat : MonoBehaviour
 {
@@ -9,18 +12,22 @@ public class Beat : MonoBehaviour
     [SerializeField] private AudioClip fearBeat;
     [SerializeField] private AudioSource beatSound;
     [SerializeField] private float delay = 2;
+    [SerializeField] private float t = 0;
     private bool isActive = false;
+    private Vector3 StartScale;
     public bool inMonsterRange = false;
 
-    private void Start() 
+    private void Start()
     {
+        StartScale = transform.localScale;
         StartCoroutine(PlayBeat());
     }
     private void Update() 
     {
-        if(!isActive)
+        if (!isActive)
         {
             StartCoroutine(PlayBeat());
+            t = Mathf.Clamp(t + Time.deltaTime *50, 0, 1.5f);
         }
     }
 
@@ -31,20 +38,28 @@ public class Beat : MonoBehaviour
 
         if(inMonsterRange)
         {
-            Debug.Log("fear");
             beatSound.PlayOneShot(fearBeat);
-            yield return new WaitForSeconds(delay / 1.5f);
+            transform.DOKill(true);
+            transform.DOPunchScale(new Vector3(0.25f, 0.25f, 0), 0.4f);
+            yield return new WaitForSeconds(delay / (1.5f+t));
             isActive = false;
         }
         else
         {
-            Debug.Log("normal");
             beatSound.PlayOneShot(simpleBeat);
+            transform.DOKill(true);
+            transform.DOPunchScale(new Vector3(0.15f, 0.15f, 0), 0.5f);
             yield return new WaitForSeconds(delay);
             isActive = false;
         }
 
         Instantiate(particlePrefab, transform.position, Quaternion.identity);
+    }
+
+    public void ChangeBeatMode(bool monsterBool)
+    {
+       inMonsterRange = monsterBool;
+        t = 0;
     }
 
     void OnTriggerEnter2D(Collider2D other) 
@@ -61,8 +76,6 @@ public class Beat : MonoBehaviour
             inMonsterRange = false;
         }
     }
-
-
 
     /*
     //TODO : Préfab particule systeme
