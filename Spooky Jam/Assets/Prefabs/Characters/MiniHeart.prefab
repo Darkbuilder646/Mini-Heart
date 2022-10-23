@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c490b1aa752b94469059f31cee69546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 4.5
+  Speed: 3
   AccelerationPower: 0.7
 --- !u!114 &2853962230902326554
 MonoBehaviour:
@@ -492,7 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc03d481d41f6a94ebab5f57c78628bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpeedFade: 0
+  SpeedFade: 2
 --- !u!114 &179700864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -507,3 +507,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asRedKey: 0
   asBlueKey: 0
+  KeyRedImage: {fileID: 0}
+  KeyBlueImage: {fileID: 0}
