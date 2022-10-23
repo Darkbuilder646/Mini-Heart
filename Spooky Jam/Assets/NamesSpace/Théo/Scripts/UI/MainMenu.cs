@@ -17,8 +17,8 @@ public class MainMenu : MonoBehaviour
         settingPanel.enabled = false;
         creditsPanel.enabled = false;
 
-        creditGroup = creditsPanel.gameObject.GetComponent<CanvasGroup>();
-        setttingGroup = setttingGroup.gameObject.GetComponent<CanvasGroup>();
+        //creditGroup = creditsPanel.gameObject.GetComponent<CanvasGroup>();
+        //setttingGroup = setttingGroup.gameObject.GetComponent<CanvasGroup>();
     }
 
     public void OpenCloseSettings()
@@ -36,7 +36,7 @@ public class MainMenu : MonoBehaviour
 
     public void PlayGame()
     {
-        //SceneManager.LoadSceneAsync("Game",LoadSceneMode.Single);
+        //SceneManager.LoadSceneAsync("Game Level Design",LoadSceneMode.Single);
         Debug.Log("Game Start");
     }
 

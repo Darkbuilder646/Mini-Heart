@@ -8,6 +8,7 @@ TagManager:
   - BlueKey
   - RedDoor
   - BlueDoor
+  - Monster
   layers:
   - Default
   - TransparentFX
