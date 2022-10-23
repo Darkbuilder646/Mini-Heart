@@ -42,13 +42,13 @@ public class CharacterControler : MonoBehaviour
             Acceleration(AccelerationType.DecelerationFinished);
         }
 
-        transform.position += Direction * Time.deltaTime * Speed;
+        transform.position += Direction * Time.fixedDeltaTime * Speed;
     }
 
     private void Acceleration(AccelerationType type)
     {
         AccelerationIndex = AccelerationCurrentMode != type ? 0 : AccelerationIndex;
-        AccelerationIndex = Mathf.Clamp(AccelerationIndex + AccelerationPower, 0, 1);
+        AccelerationIndex = Mathf.Clamp(AccelerationIndex + AccelerationPower * Time.fixedDeltaTime, 0, 1);
         Direction = Vector3.Lerp(Direction, input.GetDirection().normalized, AccelerationIndex);
         AccelerationCurrentMode = type;
     }
