@@ -39,7 +39,7 @@ Material:
     m_Floats:
     - _Fade: 0
     - _Scale_Noise: 11.8
-    - _Thickness: 0.169
+    - _Thickness: 0.07
     m_Colors:
     - _Color: {r: 6.65098, g: 0.345098, b: 0.345098, a: 0}
   m_BuildTextureStacks: []
