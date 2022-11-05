@@ -305,6 +305,7 @@ GameObject:
   - component: {fileID: 1680515203}
   - component: {fileID: 3858423609099696519}
   - component: {fileID: 179700864}
+  - component: {fileID: 4859220027748342358}
   m_Layer: 0
   m_Name: MiniHeart
   m_TagString: Player
@@ -478,6 +479,8 @@ MonoBehaviour:
   fearBeat: {fileID: 8300000, guid: ea2b41675957b2043918ec639e189f9e, type: 3}
   beatSound: {fileID: 1322717569}
   delay: 2
+  characterControler: {fileID: 2853962230902326553}
+  SpeedStress: 3.2
   t: 0
   inMonsterRange: 0
 --- !u!114 &3858423609099696519
@@ -493,6 +496,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpeedFade: 2
+  heartSound: {fileID: 1322717569}
+  fadeEnd: {fileID: 0}
+  duration: 2
 --- !u!114 &179700864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -509,3 +515,17 @@ MonoBehaviour:
   asBlueKey: 0
   KeyRedImage: {fileID: 0}
   KeyBlueImage: {fileID: 0}
+--- !u!114 &4859220027748342358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2853962230902326559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf9f8123b54ee294797fd084ea74c475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointsManager: {fileID: 0}
+  MiniHeart: {fileID: 0}

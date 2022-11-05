@@ -63,4 +63,5 @@ public static class ExtensionMethod
         Vector3 F = Vector3.Lerp(C, D, t);
         return Vector3.Lerp(E, F, t);
     }
+    
 }
