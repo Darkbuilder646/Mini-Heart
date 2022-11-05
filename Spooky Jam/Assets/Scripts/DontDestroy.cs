@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class DontDestroy : MonoBehaviour
 {
     private bool IsOrigin = false;
-    [SerializeField]  private int numberOfObjectDesired = 0;
+    [SerializeField] static private int numberOfObjectDesired = 0;
 
     private void Reset()
     {
@@ -17,7 +17,8 @@ public class DontDestroy : MonoBehaviour
     [ContextMenu("Test")]
     private void Test()
     {
-        numberOfObjectDesired = FindObjectsOfType<DontDestroy>().Length;
+        numberOfObjectDesired = 3;
+        Debug.Log(numberOfObjectDesired);
     }
     private void Start()
     {
