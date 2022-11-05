@@ -56,4 +56,12 @@ public static class ExtensionMethod
     {
         return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
     }
+
+    public static Vector3 BezierCurve(Vector3 A, Vector3 B, Vector3 C, Vector3 D, float t)
+    {
+        Vector3 E = Vector3.Lerp(A, B, t);
+        Vector3 F = Vector3.Lerp(C, D, t);
+        return Vector3.Lerp(E, F, t);
+    }
+    
 }

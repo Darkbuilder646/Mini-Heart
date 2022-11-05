@@ -4,15 +4,54 @@ using UnityEngine;
 
 public class CharacterControler : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    #region SerializeField
+    [SerializeField] private float Speed = 1;
+    [SerializeField, Range(0,1), Tooltip("0.05")] private float AccelerationPower = 0.05f;
+    #endregion
+
+    #region private
+    private AccelerationType AccelerationCurrentMode = AccelerationType.None;
+    private float AccelerationIndex = 0;
+    private InputInterface input = null;
+    private enum AccelerationType
     {
-        
+        AccelerationFinished,
+        DecelerationFinished,
+        None
+    }
+    private Vector3 Direction;
+
+    public float speed { get => Speed; set => Speed = value; }
+    #endregion
+
+    private void Awake()
+    {
+        input = gameObject.GetComponent<InputInterface>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        transform.rotation = Direction != Vector3.zero ? Quaternion.LookRotation(transform.forward, Direction) : transform.rotation;
+    }
+    private void FixedUpdate()
+    {
+        if (input.GetDirection() != Vector3.zero)
+        {
+            Acceleration(AccelerationType.AccelerationFinished);
+        }
+        else
+        {
+            Acceleration(AccelerationType.DecelerationFinished);
+        }
+
+        transform.position += Direction * Time.fixedDeltaTime * Speed;
+    }
+
+    private void Acceleration(AccelerationType type)
+    {
+        AccelerationIndex = AccelerationCurrentMode != type ? 0 : AccelerationIndex;
+        AccelerationIndex = Mathf.Clamp(AccelerationIndex + AccelerationPower * Time.fixedDeltaTime, 0, 1);
+        Direction = Vector3.Lerp(Direction, input.GetDirection().normalized, AccelerationIndex);
+        AccelerationCurrentMode = type;
     }
 }

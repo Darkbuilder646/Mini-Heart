@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - RedKey
+  - BlueKey
+  - RedDoor
+  - BlueDoor
+  - Monster
   layers:
   - Default
   - TransparentFX
@@ -15,7 +20,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Test_Bounce
   - 
   - 
   - 
@@ -38,6 +43,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 942544703
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Character
+    uniqueID: 1315829561
+    locked: 0
+  - name: Key
+    uniqueID: 3683381065
     locked: 0
