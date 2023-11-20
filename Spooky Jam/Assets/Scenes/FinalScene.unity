@@ -250,18 +250,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 29992997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: f90c3b02dfbc2794c80b35e98d059667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ChooseScene:
   - FinalScene
-=======
-  m_Script: {fileID: 11500000, guid: 704b13569f3e2864c8ec6e4d217cd792, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfObjectDesired: 0
->>>>>>> cb61eb758e1dc9646753745782380a9f81142097
 --- !u!1001 &31593626
 PrefabInstance:
   m_ObjectHideFlags: 0
