@@ -1929,7 +1929,6 @@ PrefabInstance:
       propertyPath: KeyBlueImage
       value: 
       objectReference: {fileID: 724730915}
-<<<<<<< HEAD
     - target: {fileID: 1680515203, guid: 786c96268c014704b99235bd5e2de8cd, type: 3}
       propertyPath: characterControler
       value: 
@@ -1938,8 +1937,6 @@ PrefabInstance:
       propertyPath: Speed
       value: 11.84
       objectReference: {fileID: 0}
-=======
->>>>>>> cb61eb758e1dc9646753745782380a9f81142097
     - target: {fileID: 2853962230902326556, guid: 786c96268c014704b99235bd5e2de8cd, type: 3}
       propertyPath: m_RootOrder
       value: 2
